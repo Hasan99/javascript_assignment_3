@@ -76,3 +76,106 @@
 //     console.log("With vowels: " + text);
 //     console.log("Without vowels: " + withoutVowels);
 // }
+
+
+
+// Question 7
+// function countPairVowels(text) {
+//     text = text.toLowerCase();
+//     var vowelPairs = [];
+
+//     for (let index = 0; index < text.length - 1; index++) {
+
+//         if (isVowel(text[index])) {
+
+//             if (isVowel(text[index + 1])) {
+//                 vowelPairs.push(text[index] + text[index + 1]);
+//             }
+//         }
+//     }
+
+//     document.write(`<h1>Sentence: ${text}</h1>`);
+//     document.write(`<h1>There are ${vowelPairs.length} vowel pairs in above sentence.</h1>`);
+//     document.write(`<h1>Vowel Pairs: ${vowelPairs}</h1>`);
+// }
+// function isVowel(character) {
+//     var vowel = false;
+
+//     switch (character) {
+//         case "a":
+//             vowel = true;
+//             break;
+//         case "e":
+//             vowel = true;
+//             break;
+//         case "i":
+//             vowel = true;
+//             break;
+//         case "o":
+//             vowel = true;
+//             break;
+//         case "u":
+//             vowel = true;
+//             break;
+//     }
+
+//     return vowel;
+// }
+// countPairVowels("education and vacation with tooths and foots");
+
+
+
+// Question 8
+// function main() {
+//     var distanceInKm = prompt("Enter distance in km");
+//     distanceInKm = Number(distanceInKm);
+
+//     document.write(`<h1>${distanceInKm} km = ${kmToMeters(distanceInKm)} m</h1>`);
+//     document.write(`<h1>${distanceInKm} km = ${kmToFeets(distanceInKm)} ft</h1>`);
+//     document.write(`<h1>${distanceInKm} km = ${kmToInches(distanceInKm)} inch</h1>`);
+//     document.write(`<h1>${distanceInKm} km = ${kmToCentimeters(distanceInKm)} cm</h1>`);
+// }
+// function kmToMeters(distanceInKm) {
+//     return distanceInKm * 1000;
+// }
+// function kmToFeets(distanceInKm) {
+//     return distanceInKm * 3281;
+// }
+// function kmToInches(distanceInKm) {
+//     return distanceInKm * 39370;
+// }
+// function kmToCentimeters(distanceInKm) {
+//     return distanceInKm * 100000;
+// }
+// main()
+
+
+
+// Question 9
+// function main() {
+//     var totalWorkingHours = prompt("Enter total working hours");
+//     var perHourRateInRs = 12;
+//     totalWorkingHours = parseInt(totalWorkingHours);
+
+//     var overtimePay = calculateOvertimePay(totalWorkingHours, perHourRateInRs);
+
+//     document.write(`<h1>Total Working Hours: ${totalWorkingHours}</h1>`);
+//     document.write(`<h1>Per Hour Rate in Rs.: ${perHourRateInRs}</h1>`);
+
+//     if (overtimePay === -1) {
+//         document.write(`<h1>You did not work for more than 40 hours!</h1>`);
+//         document.write("<h3>Result: No overtime payment will be given!</h3>")
+//     }
+//     else {
+//         document.write(`<h1>Overtime Hours: ${overtimePay / perHourRateInRs}</h1>`);
+//         document.write(`<h1>Overtime Payment: Rs. ${overtimePay}/-</h1>`);
+//     }
+// }
+// function calculateOvertimePay(totalWorkingHours, perHourRateInRs) {
+//     if (totalWorkingHours > 40) {
+//         var overtimeHours = totalWorkingHours - 40;
+//         return perHourRateInRs * overtimeHours;
+//     }
+//     return -1;
+// }
+// main()
