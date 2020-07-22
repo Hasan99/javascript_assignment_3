@@ -179,3 +179,93 @@
 //     return -1;
 // }
 // main()
+
+
+
+// Question 10
+// function main() {
+//     var amount = prompt("Enter amount to withdraw");
+
+//     document.write(`<h1>Amount to Withdraw is : ${amount}</h1>`)
+
+//     countCurrencyNotes(amount);
+// }
+// function countCurrencyNotes(amount) {
+//     if (amount.trim().length > 3) {
+//         document.write("<h1>Only 3 digit value is allowed without decimal point!</h1>")
+//     }
+//     else if (amount.trim().length === 1) {
+//         if (amount.charCodeAt(0) >= 48 && amount.charCodeAt(0) <= 57) {
+//             document.write("<h1>Amount must be greater than or equal to 10!</h1>");
+//         }
+//         else {
+//             document.write("<h1>Invalid Amount!</h1>")
+//         }
+//     }
+//     else {
+//         var validAmount = true;
+
+//         for (let index = 0; index < amount.length; index++) {
+//             if (!(amount.charCodeAt(0) >= 48 && amount.charCodeAt(0) <= 57)) {
+//                 validAmount = false;
+//                 break;
+//             }
+//         }
+//         if (validAmount) {
+//             amount = parseInt(amount);
+//             var countOfNote10 = 0;
+//             var countOfNote50 = 0;
+//             var countOfNote100 = 0;
+//             var counts = [];
+
+//             if (amount > 99) {
+//                 var ans = amount / 100;
+//                 countOfNote100 = Math.floor(ans);
+
+//                 counts = countNotes(amount);
+//                 countOfNote10 = counts[0];
+//                 countOfNote50 = counts[1];
+//             }
+//             else {
+//                 counts = countNotes(amount);
+//                 countOfNote10 = counts[0];
+//                 countOfNote50 = counts[1];
+//             }
+
+//             document.write(`<h1>You will have ${countOfNote100} hundred note(s) ${countOfNote50} fifty note and ${countOfNote10} ten note(s)</h1>`);
+//         }
+//         else {
+//             document.write(`'<h3>${amount}' is not a valid amount!</h3>`)
+//         }
+//     }
+// }
+// function countNotes(amount) {
+//     var counts = [];
+//     var remainder = 0;
+//     var countOfNote10 = 0;
+//     var countOfNote50 = 0;
+
+//     amount = Math.floor(amount / 10);
+//     remainder = amount % 10;
+
+//     if (remainder === 0) {
+//         countOfNote10 = 0;
+//         countOfNote50 = 0;
+//     }
+//     else if (remainder > 0 && remainder < 5) {
+//         countOfNote10 = remainder;
+//     }
+//     else if (remainder === 5) {
+//         countOfNote50 = 1;
+//     }
+//     else if (remainder > 5) {
+//         countOfNote50 = 1;
+//         countOfNote10 = remainder - 5;
+//     }
+
+//     counts[0] = countOfNote10;
+//     counts[1] = countOfNote50;
+
+//     return counts;
+// }
+// main()
